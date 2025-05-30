@@ -20,15 +20,15 @@ const Hero = () => {
               justifyContent: { sm: "center" },
             }}
           >
-            <Typography variant="h3">Aleko Dimitrov,</Typography>
-            <Typography variant="body1">Developer of the web.</Typography>
+            <Typography variant="h3">karniktochi.com</Typography>
+            <Typography variant="body1">Точиларски услуги</Typography>
           </Box>
           <Avatar
             alt="Aleko Dimitrov"
-            src="./aleko-avatar.jpg"
+            src="./karniktochi-logo.png"
             sx={{
-              width: { xs: 90, sm: 120 },
-              height: { xs: 90, sm: 120 },
+              width: { xs: 90, sm: 180 },
+              height: { xs: 90, sm: 180 },
               marginTop: 3,
               marginBottom: 3,
             }}
@@ -68,10 +68,14 @@ const Hero = () => {
             }}
           ></Box>
           <p className="heroP">
-            Welcome to my personal website! I&apos;m Aleko, and I&apos;m thrilled to have you here. This platform is a reflection of my diverse interests and a space where I share articles on topics ranging from web development to personal finance. If something piques my curiosity, you can expect to find my thoughts and insights on it.
+            Вече близо 90 години предлагаме точиларски услуги на готвачи,
+            месари, ресторантьори, пекари, пчелари, предприятия за производство
+            на храни и други. 📍 Работим в гр. София, гр. Варна и в останалата
+            част от страната посредством куриер. Работим и в Румъния и Гърция
+            чрез Еконт.
           </p>
           <Box display={"flex"}>
-            <h2 className="heroH2">I</h2>
+            <h2 className="heroH2">Ние</h2>
             <motion.h2
               initial={{ scale: 0.6 }}
               animate={{ scale: 0.8 }}
@@ -97,8 +101,7 @@ const Hero = () => {
           ></Box>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
             <p className="heroH4">
-              Next.js, React, Linux, FOSS, Personal Finance,
-              Blockchain, and more.
+              Да поправяме и поддържаме 🛠️ всички режещи и мелещи инструменти!
             </p>
           </Box>
         </Box>

@@ -1,9 +1,7 @@
 import {
   AppBar,
-  Button,
   IconButton,
   ListItem,
-  ListItemText,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -12,35 +10,32 @@ import { IoClose } from "react-icons/io5";
 import React from "react";
 import Box from "@mui/material/Box";
 import { motion } from "framer-motion";
-import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
 
-let navbarLinks = [
+const navbarLinks = [
   {
     href: "/",
-    name: "Home",
+    name: "Начало",
   },
   {
     href: "/articles",
-    name: "Blog",
+    name: "Блог",
   },
   {
     href: "/about",
-    name: "About",
+    name: "За нас",
   },
-
   {
     href: "/contacts",
-    name: "Contacts",
+    name: "Контакти",
   },
 ];
 
 const Navbar = (props: any) => {
   const setNavigationState = () => {
-    props.mobileNavigation === false
-      ? props.setMobileNavigation(true)
-      : props.setMobileNavigation(false);
+    props.setMobileNavigation(!props.mobileNavigation);
   };
+
   return (
     <AppBar
       color="transparent"
@@ -60,50 +55,44 @@ const Navbar = (props: any) => {
           sx={{
             width: "100%",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
           }}
         >
+          {/* Navigation Links */}
           <Box
+            className="navbarA"
             sx={{
-              display: "flex",
-              alignItems: "center",
+              display: { xs: "none", sm: "flex" },
+              gap: 2,
               flex: 1,
+              justifyContent: "center",
             }}
           >
-            <Link href="/">
-              <a>
-                <LogoSvg className="logoSvg" />
-              </a>
-            </Link>
+            {navbarLinks.map((link, key) => (
+              <motion.div
+                initial={{ backgroundColor: "#fff" }}
+                whileHover={{
+                  borderRadius: 7,
+                  backgroundColor: "#f8f1f9",
+                  transition: { duration: 0.3 },
+                }}
+                key={key}
+              >
+                <Link href={link.href} passHref>
+                  <a>
+                    <ListItem sx={{ maxWidth: "fit-content", borderRadius: 2 }}>
+                      <Typography variant="caption" fontSize="16px">
+                        {link.name}
+                      </Typography>
+                    </ListItem>
+                  </a>
+                </Link>
+              </motion.div>
+            ))}
           </Box>
-          <Box className={"navbarA"}>
-            {navbarLinks.map((link, key) => {
-              return (
-                <motion.div
-                  initial={{ backgroundColor: "#ffff" }}
-                  whileHover={{
-                    borderRadius: 7,
-                    backgroundColor: "#f8f1f9",
-                    transition: { duration: 0.3 },
-                  }}
-                  key={key}
-                >
-                  <Link href={link.href} passHref>
-                    <a>
-                      <ListItem
-                        sx={{ maxWidth: "fit-content", borderRadius: 2 }}
-                      >
-                        <Typography variant="caption" fontSize="16px">
-                          {link.name}
-                        </Typography>
-                      </ListItem>
-                    </a>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </Box>
+
+          {/* Mobile Menu Button */}
           <Box
             onClick={setNavigationState}
             sx={{ display: { xs: "block", sm: "none" } }}

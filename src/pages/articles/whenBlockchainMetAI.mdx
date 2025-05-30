@@ -3,70 +3,146 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Head from "next/head";
 
-<>
-  <Head>
-    <title>When Blockchain Met Artificial Intelligence: A Revolutionary Collaboration</title>
-  </Head>
+export default function SharpeningServices() {
+  return (
+    <>
+      <Head>
+        <title>Точиларски услуги "Карник Точи"—Кухненски инструменти | Karnik Tochi</title>
+      </Head>
 
-  <Box
-    padding={3}
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      marginTop: { xs: 8, sm: 14 },
-    }}
-  >
-# When Blockchain Met Artificial Intelligence: A Revolutionary Collaboration
-    <Box display="flex" mt="10px" mb="15px" justifyContent="space-between">
-      <Box>
-        <Typography color="#6f1c7f" variant="caption" mr="5px">
-          <a href="#">Aleko Dimitrov</a>
+      <Box
+        padding={3}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          marginTop: { xs: 8, sm: 14 },
+        }}
+      >
+        <Typography variant="h4" mb={2} fontWeight={600}>
+          Точиларски услуги "Карник Точи"—Кухненски инструменти
         </Typography>
-        <Typography variant="caption" mr="10px">
-          06 / 10 / 2023
+
+        <Typography mb={2} color="#444444" lineHeight="30px">
+          Вече близо 90 години предлагаме точиларски услуги на готвачи, месари,
+          ресторантьори, пекари, пчелари, предприятия за производство на храни и други.
+        </Typography>
+
+        <Typography mb={2} color="#444444" lineHeight="30px">
+          📍 Работим в гр. София, гр. Варна и в останалата част от страната посредством куриер.
+          Работим и в Румъния и Гърция чрез Еконт.
+        </Typography>
+
+        <Typography mb={4} color="#444444" lineHeight="30px">
+          📞 Свържете се с нас или ни{' '}
+          <a
+            href="https://karniktochi.com/pages/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            посетете физически
+          </a>.
+        </Typography>
+
+        <Typography variant="h6" mb={2} fontWeight={600}>
+          Защо професионалистите избират услугите ни?
+        </Typography>
+
+        <Box component="ol" pl={3} mb={4} color="#444444" lineHeight="30px">
+          <li>Познаваме специфичните изисквания на всеки инструмент.</li>
+          <li>Използваме съвременни методи за заточване, съчетани с традиционно майсторство.</li>
+          <li>Предлагаме персонално обслужване като съобразяваме услугите си с вашите нужди.</li>
+          <li>Удобни локации с възможност за работа посредством куриер.</li>
+        </Box>
+
+        <Typography mb={3} color="#444444" lineHeight="30px">
+          <a
+            href="https://karniktochi.com/pages/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Посетете ни или ни изпратете вашите кухненски инструменти
+          </a>.
+        </Typography>
+
+        <Typography variant="h6" mb={1} fontWeight={600}>
+          Ето част от кухненските остриета които поддържаме:
+        </Typography>
+
+        {[
+          {
+            title: "Кухненски ножове",
+            content:
+              "Можем да възстановим режещия ръб, да изтъним острието, да поправим удари и да репрофилираме. Заточваме ножове на готвача, гюто, сантоку, пети, накири, ножове за суши—янагиба, деба и много други.",
+          },
+          {
+            title: "Месарски ножове",
+            content: "Заточваме ножове за дране, обезкостяване, общи касапски и други.",
+          },
+          {
+            title: "Дюнер ножове и дискове",
+            content:
+              "Сервирането на донер кебаб е изкуство. Услугата ни гарантира гладки и тънки разрези. Заточваме кръгли дискове за дюнер и дълги ножове.",
+          },
+          {
+            title: "Колбасорезачки, слайс ножове",
+            content: "Работим с всички размери слайс ножове използвани в хранително-вкусовата промишленост.",
+          },
+          {
+            title: "Решетки и ножчета за месомелачки",
+            content:
+              "Заточваме ножчетата и възстановяваме равната плоскост на решетките, за да може каймата да излезе точно както трябва.",
+          },
+          {
+            title: "Сатъри за месо",
+            content: "Ще ви спестим излишни разходи и ще намалим натоварването при работа със сатър.",
+          },
+          {
+            title: "Брадви за месо",
+            content: "За да може да работите прецизно—с лек, минимален замах.",
+          },
+          {
+            title: "Триони за месо и банциг ленти",
+            content:
+              "Заточването възстановява необходимата агресивност на триона и лентата. Чистият разрез е от решаващо значение за контрола на порциите.",
+          },
+          {
+            title: "Остриета на миксери и блендери",
+            content:
+              "Остриетата на миксерите и пасаторите трябва да са остри, за гладки и хомогенни смеси.",
+          },
+          {
+            title: "Ножове за зеленчукорезачки",
+            content: "Заточваме тези специализирани ножове за високо производствени линии.",
+          },
+          {
+            title: "Ножове от машини за рязане на хляб",
+            content: "За да имате винаги равномерни нарязан хляб, без смачкване.",
+          },
+          {
+            title: "Ножове за кафемелачки",
+            content: "Кафемелачката ви ще смила равномерно и извлича възможно най-много от аромата на кафето.",
+          },
+        ].map(({ title, content }, idx) => (
+          <Box key={idx} mb={3}>
+            <Typography variant="h6" fontWeight={600} mb={1}>
+              {title}
+            </Typography>
+            <Typography color="#444444" lineHeight="30px">{content}</Typography>
+          </Box>
+        ))}
+
+        <Typography mt={3} color="#444444" lineHeight="30px">
+          <a
+            href="https://karniktochi.com/pages/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Посетете ни или ни изпратете вашите кухненски инструменти
+          </a>.
         </Typography>
       </Box>
-      <Box display="flex" flexDirection="column" alignItems="flex-end">
-        <Typography variant="caption">⏰ 2 min read</Typography>
-      </Box>
-    </Box>
-    <Box color="#444444" lineHeight="30px">
-<img></img>
-In a world driven by constant technological advancements, the convergence of **blockchain** and **artificial intelligence (AI)** has sparked a wave of excitement and limitless possibilities. While these two groundbreaking technologies have individually made significant impacts, their union has the potential to reshape industries, improve efficiency, and enhance trust in ways previously unimaginable. Let&apos;s embark on a journey to discover the captivating story of how blockchain and AI came together, unlocking a new era of innovation.
+    </>
 
-## Chapter 1: The Genesis of Blockchain
-
-Our story begins with the inception of **blockchain**, a revolutionary distributed ledger technology. Designed to provide a transparent, immutable, and decentralized system, blockchain captured the imagination of developers and entrepreneurs worldwide. Its ability to securely record and verify transactions, without the need for intermediaries, laid the foundation for disruptive applications across various sectors.
-
-## Chapter 2: The Rise of Artificial Intelligence
-
-In parallel, the rise of **artificial intelligence** was transforming industries and challenging the boundaries of human capabilities. AI systems, powered by machine learning algorithms and deep neural networks, demonstrated remarkable feats in image recognition, natural language processing, and complex decision-making. From autonomous vehicles to personalized recommendations, AI became an integral part of our daily lives.
-
-## Chapter 3: Convergence of Blockchain and AI
-
-As both blockchain and AI matured, innovators recognized the immense potential of combining their strengths. The decentralized nature of blockchain addressed key challenges of AI, including data privacy, security, and transparency. Simultaneously, AI enhanced the capabilities of blockchain by automating decision-making, analyzing vast amounts of data, and enabling intelligent, self-executing contracts.
-
-## Chapter 4: Securing AI Models with Blockchain
-
-One of the primary applications of this collaboration emerged in the realm of AI model security. By leveraging blockchain&apos;s tamper-proof nature, developers could store AI models and their training data on a distributed network. This ensured the integrity and transparency of the models, making them resistant to manipulation or unauthorized access. Organizations and individuals gained confidence in the authenticity and fairness of AI systems, opening doors to novel use cases in finance, healthcare, and more.
-
-## Chapter 5: Decentralized AI Marketplaces
-
-Blockchain and AI together pioneered the concept of decentralized AI marketplaces. These platforms leveraged smart contracts to facilitate secure and transparent interactions between AI developers, data providers, and users. With blockchain&apos;s auditability, stakeholders could verify the origins and quality of datasets, ensuring ethical and fair AI development. Meanwhile, users gained access to a diverse range of AI services, enabling accelerated innovation and collaboration across borders.
-
-## Chapter 6: Enhancing Supply Chain Efficiency
-
-The collaboration between blockchain and AI also revolutionized supply chain management. By integrating AI algorithms with blockchain&apos;s immutable ledger, stakeholders gained real-time visibility into every stage of the supply chain. From production to distribution, AI-powered analytics provided insights for optimization, reducing inefficiencies, and enhancing traceability. Counterfeit goods became more easily detectable, and consumers gained trust in the authenticity and ethical sourcing of products.
-
-## Conclusion: A New Era of Possibilities
-
-The captivating story of blockchain and artificial intelligence intertwining showcases the power of collaboration in the technological landscape. By combining the transparency and security of blockchain with the analytical capabilities of AI, we unlock a realm of limitless possibilities. From securing AI models to decentralized marketplaces and optimized supply chains, this synergy is propelling us towards a future defined by innovation, trust, and transformative impact.
-
-As we continue to witness the evolution of these technologies, let us embrace the opportunities they present and strive to harness their potential responsibly. The journey of blockchain and AI has only just begun, and together, we can shape a brighter, more intelligent future.
-
-
-</Box>
-
-  </Box>
-</>
+);
+}

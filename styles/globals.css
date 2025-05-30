@@ -23,7 +23,7 @@ p {
 }
 
 .heroP {
-  color: rgb(155, 155, 155);
+  color: whitesmoke;
   font-size: 0.9rem;
 }
 
@@ -35,7 +35,7 @@ p {
 .heroH4 {
   display: flex;
   align-items: center;
-  color: rgb(155, 155, 155);
+  color: whitesmoke;
 }
 
 .latestPostsTitle {

@@ -18,7 +18,6 @@ const BlogSnippet = ({ blogMeta }: any) => {
             <p className="latestPostsP">
               <Moment fromNow>{blogMeta.date}</Moment>
             </p>
-            <p className="latestPostsP">2 min read</p>
           </Box>
           <p className="latestPostsP">{blogMeta.description}</p>
         </motion.div>

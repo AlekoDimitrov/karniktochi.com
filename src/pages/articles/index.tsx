@@ -36,22 +36,22 @@ const Blog = () => {
       }}
     >
       <Head>
-        <title>Blog | Aleko Dimitrov</title>
+        <title>Karniktochi - Блог</title>
       </Head>
-      <Typography variant="h3">Blog</Typography>
+      <Typography variant="h3">Блог</Typography>
       <Typography variant="body1" mb={4}>
-        Everything I&apos;ve writtern
+        Всико което сме написали
       </Typography>
       <TextField
         id="standard-basic"
-        label="Search articles"
+        label="Потърси"
         variant="standard"
         onChange={(event) => {
           setSearchTerm(event.target.value);
         }}
       />
       <Box mt={5}>
-        <h2>All Posts</h2>
+        <h2>Всички постове</h2>
       </Box>
       {blogsMeta
         .filter((val) => {

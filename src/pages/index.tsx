@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Aleko Dimitrov | Developer </title>
+        <title>Karniktochi - Точиларски услуги </title>
       </Head>
 
       <Hero />

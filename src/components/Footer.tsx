@@ -3,11 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 const footerLinks = [
-  { text: "Home", href: "/" },
-  { text: "Blog", href: "/articles" },
-  { text: "About", href: "/about" },
-  { text: "Contacts", href: "/contacts" },
-  { text: "Github", href: "https://github.com/AlekoDimitrov" },
+  { text: "Начало", href: "/" },
+  { text: "Блог", href: "/articles" },
+  { text: "За нас", href: "/about" },
+  { text: "Контакти", href: "/contacts" },
+  { text: "Собственик", href: "https://github.com/AlekoDimitrov" },
 ];
 
 const Footer = () => {
